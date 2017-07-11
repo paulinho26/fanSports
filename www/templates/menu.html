@@ -1,0 +1,42 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  
+  <ion-side-menu-content>
+    
+      <!-- header bar and navigation bar -->
+    <ion-nav-bar class="bar-positive">
+        <!-- navigation button -->
+      <ion-nav-bar-button>
+      </ion-nav-bar-button>
+
+      <ion-nav-buttons side="left">
+      <button class="button button-clear" menu-toggle="left">
+        <span class="icon ion-navicon"></span>
+      </button>
+    </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view> </ion-nav-view>
+  </ion-side-menu-content>
+
+
+  <ion-side-menu side="left">
+    <ion-header-bar  class="dark-bar">
+    <h1 class="title">Fansport</h1>
+    </ion-header-bar>
+      <ion-content>
+        <ion-list>
+          <ion-item class="item-icon-left" ui-sref="search" menu-close>
+            <span class="icon ion-search"></span>Search
+          </ion-item>
+          <ion-item class="item-icon-left" ui-sref="home" menu-close>
+            <span class="icon ion-home"></span>Home
+          </ion-item>
+          <ion-item class="item-icon-left" ui-sref="sports" menu-close>
+            <span class="icon ion-ball"></span>Sports
+          </ion-item>
+          <ion-item class="item-icon-left" ui-sref="settings" menu-close>
+            <span class="icon ion-cogs"></span>Settings
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

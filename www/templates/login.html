@@ -1,0 +1,66 @@
+<ion-view view-title="Login" hide-nav-bar="true" name="login-view">
+	<ion-content  class="padding" overflow-scroll="true">
+		<div class="row">
+            <div class="col" style="text-align: center;">
+                <!-- <img class="" src="img/icon.svg" /> -->
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <img style="width: 70%;" src="img/icon.svg" />
+            </div>
+        </div>
+
+		<div class="list list-insert" id="loginForm">
+			
+			<label class="item item-input">
+				<input type="text" ng-model="data.email" placeholder="EMAIL">
+			</label>
+			<label class="item item-input">
+				<input type="password" ng-model="data.password" placeholder="PASSWORD">
+			</label>
+		</div>
+
+		<!-- Login user-->
+		<div class="row">
+			<div class="col" style="text-align: center;">
+			
+				<button class="button button-small button- " ng-click="loginUser(data)" >login</button>
+			</div>
+			<div class="col" style="text-align: center;">
+			
+				<button class="button button-small button-stable " ng-click="logout()" > logout</button>
+			</div>
+		</div>
+
+		<!-- create user -->
+		<div class="row">
+			<div class="col" style="text-align: center;">
+				<button class="button button-small button-balanced" ng-click="createUser(data)" > Create Account</button>
+			</div>
+		</div>
+
+		<!-- Error -->
+        <div class="card" ng-if="error">
+          <div class="item item-text-wrap">
+            <p class="assertive text-center"><strong>{{ error }}</strong></p>
+          </div>
+        </div>
+
+<!-- 
+		<div class="col">
+			<div class="col" style="text-align: center;">
+				<button class="button button-small button-calm icon-left " ng-click="fblogin()">  
+				<i class="fa fa-facebook-official"></i> facebook </button>
+			</div>	
+			<div class="col" style="text-align: center;">
+				<button class="button button-small button-calm icon-left " ng-click="fblogin()">  
+				<i class="fa fa-google"></i> google </button>
+			</div>
+		</div>
+		  -->
+
+		
+	</ion-content>
+</ion-view>

@@ -20,35 +20,49 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
   });
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+   $stateProvider
+     .state('menu', {
+      url: '/menu',
+       abstract: true,
+       controller: 'MenuCtrl',
+       templateUrl: 'templates/menu.html'
+     })
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
-  $stateProvider
+    .state('login', {
+      url: '/login',
+      controller: 'LoginCtrl',
+      templateUrl: 'templates/login.html'
+    })
 
-  // setup an abstract state for the tabs directive
-    .state('tab', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-  })
+    .state('tabs',{
+      url: '/tabs',
+      templateUrl: 'templates/tabs/tabs.html'
+    })
 
-  // Each tab has its own nav history stack:
+  .state('register', {
+      url: '/register',
+      controller: 'RegisterCtrl',
+      templateUrl: 'templates/register.html'
+    })
+    .state('profile', {
+      url: '/profile',
+      // controller: 'ProfileCtrl',
+      templateUrl: 'templates/profile.html'
+    })
 
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
+    .state('home', {
+      url: '/home',
+      //controller: 'LoginCtrl',
+      templateUrl: 'templates/home.html'
+    })
+
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
